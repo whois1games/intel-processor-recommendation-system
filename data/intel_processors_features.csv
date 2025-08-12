@@ -1,0 +1,149 @@
+processor_name,category,feat.total_cores,feat.total_threads,feat.max_turbo_ghz,feat.base_freq_ghz,feat.cache_mb,feat.base_power_w,feat.turbo_power_w,feat.price_usd,feat.max_mem_gb,feat.gfx_max_dyn_ghz,feat.execution_units,feat.vertical_segment,feat.freq_per_watt,feat.cores_per_watt,feat.cache_per_core
+Intel® Core™ 3 processor 100HL (12M Cache- up to 4.60 GHz),Core_Processors,8,12,4.6,2.1,12.0,45.0,115.0,306.0,96.0,1.3,48.0,Embedded,0.10222222222222221,0.17777777777777778,1.5
+Intel® Core™ 3 processor 100UL (10M Cache- up to 4.50 GHz),Core_Processors,6,8,4.5,2.4,10.0,15.0,55.0,285.0,96.0,1.25,64.0,Embedded,0.3,0.4,1.6666666666666667
+Intel® Core™ 3 processor 100U (10M Cache- up to 4.70 GHz),Core_Processors,6,8,4.7,2.4,10.0,15.0,55.0,1195.0,96.0,1.25,64.0,Mobile,0.31333333333333335,0.4,1.6666666666666667
+Intel® Core™ 3 processor 100U (10M Cache- up to 4.70 GHz- with IPU),Core_Processors,6,8,4.7,2.4,10.0,15.0,55.0,1195.0,96.0,1.25,64.0,Mobile,0.31333333333333335,0.4,1.6666666666666667
+Intel® Core™ 3 Processor 201EF (12M Cache- up to 4.80 GHz),Core_Processors,4,8,4.8,2.4,12.0,35.0,115.0,1195.0,192.0,1.85,72.0,Embedded,0.14285714285714285,0.4,3.0
+Intel® Core™ 3 Processor 201E (12M Cache- up to 4.80 GHz),Core_Processors,4,8,4.8,2.4,12.0,35.0,115.0,134.0,192.0,1.55,24.0,Embedded,0.14285714285714285,0.4,3.0
+Intel® Core™ 3 Processor 201TE (12M Cache- up to 4.60 GHz),Core_Processors,4,8,4.6,2.4,12.0,35.0,115.0,134.0,192.0,1.55,24.0,Embedded,0.14285714285714285,0.4,3.0
+Intel® Core™ 5 processor 120HL (18M Cache- up to 4.70 GHz),Core_Processors,12,16,4.7,2.4,18.0,45.0,95.0,279.0,96.0,1.45,80.0,Embedded,0.10444444444444445,0.26666666666666666,1.5
+Intel® Core™ 5 processor 120UL (12M Cache- up to 4.60 GHz),Core_Processors,10,12,4.6,2.4,12.0,15.0,55.0,277.0,96.0,1.25,80.0,Embedded,0.30666666666666664,0.6666666666666666,1.2
+Intel® Core™ 5 processor 120U (12M Cache- up to 5.00 GHz),Core_Processors,10,12,5.0,2.4,12.0,15.0,55.0,1195.0,96.0,1.3,80.0,Mobile,0.3333333333333333,0.6666666666666666,1.2
+Intel® Core™ 5 processor 130HL (18M Cache- up to 4.80 GHz),Core_Processors,12,16,4.8,2.4,18.0,45.0,95.0,311.0,96.0,1.5,80.0,Embedded,0.10666666666666666,0.26666666666666666,1.5
+Intel® Core™ 5 processor 130UL (12M Cache- up to 4.70 GHz),Core_Processors,10,12,4.7,2.4,12.0,15.0,55.0,309.0,96.0,1.25,80.0,Embedded,0.31333333333333335,0.6666666666666666,1.2
+Intel® Core™ 5 processor 210H (12M Cache- up to 4.80 GHz),Core_Processors,8,12,4.8,2.4,12.0,45.0,115.0,1195.0,96.0,1.4,48.0,Mobile,0.10666666666666666,0.17777777777777778,1.5
+Intel® Core™ 5 Processor 211EF (20M Cache- up to 4.90 GHz),Core_Processors,10,16,4.9,2.4,20.0,35.0,115.0,1195.0,192.0,1.85,0.0,Embedded,0.14285714285714285,0.4,2.0
+Intel® Core™ 5 Processor 211E (20M Cache- up to 4.90 GHz),Core_Processors,10,16,4.9,2.4,20.0,35.0,115.0,221.0,192.0,1.55,24.0,Embedded,0.14285714285714285,0.4,2.0
+Intel® Core™ 5 Processor 211TE (20M Cache- up to 4.80 GHz),Core_Processors,10,16,4.8,2.4,20.0,35.0,115.0,221.0,192.0,1.55,24.0,Embedded,0.14285714285714285,0.4,2.0
+Intel® Core™ 5 processor 220H (18M Cache- up to 4.90 GHz),Core_Processors,12,16,4.9,2.4,18.0,45.0,115.0,1195.0,96.0,1.5,80.0,Mobile,0.1088888888888889,0.26666666666666666,1.5
+Intel® Core™ 5 processor 220U (12M Cache- up to 5.00 GHz),Core_Processors,10,12,5.0,2.4,12.0,15.0,55.0,1195.0,96.0,1.3,80.0,Mobile,0.3333333333333333,0.6666666666666666,1.2
+Intel® Core™ 5 Processor 221E (24M Cache- up to 5.20 GHz),Core_Processors,14,20,5.2,2.4,24.0,35.0,115.0,232.0,192.0,1.55,32.0,Embedded,0.14285714285714285,0.4,1.7142857142857142
+Intel® Core™ 5 Processor 221TE (24M Cache- up to 5.00 GHz),Core_Processors,14,20,5.0,2.4,24.0,35.0,115.0,232.0,192.0,1.55,32.0,Embedded,0.14285714285714285,0.4,1.7142857142857142
+Intel® Core™  7 processor 150HL (24M Cache- up to 5.00 GHz),Core_Processors,14,20,5.0,2.4,24.0,45.0,115.0,430.0,96.0,1.5,96.0,Embedded,0.1111111111111111,0.3111111111111111,1.7142857142857142
+Intel® Core™ 7 processor 150UL (12M Cache- up to 5.00 GHz),Core_Processors,10,12,5.0,2.4,12.0,15.0,55.0,399.0,96.0,1.3,96.0,Embedded,0.3333333333333333,0.6666666666666666,1.2
+Intel® Core™ 7 processor 150U (12M Cache- up to 5.40 GHz),Core_Processors,10,12,5.4,2.4,12.0,15.0,55.0,1195.0,96.0,1.3,96.0,Mobile,0.36000000000000004,0.6666666666666666,1.2
+Intel® Core™ 7 processor 160HL (24M Cache- up to 5.20 GHz),Core_Processors,14,20,5.2,2.4,24.0,45.0,115.0,457.0,96.0,1.5,96.0,Embedded,0.11555555555555556,0.3111111111111111,1.7142857142857142
+Intel® Core™ 7 processor 160UL (12M Cache- up to 5.20 GHz),Core_Processors,10,12,5.2,2.4,12.0,15.0,55.0,426.0,96.0,1.3,96.0,Embedded,0.3466666666666667,0.6666666666666666,1.2
+Intel® Core™ 7 processor 240H (24M Cache- up to 5.20 GHz),Core_Processors,10,16,5.2,2.4,24.0,45.0,115.0,1195.0,96.0,1.55,64.0,Mobile,0.11555555555555556,0.2222222222222222,2.4
+Intel® Core™ 7 processor 250H (24M Cache- up to 5.40 GHz),Core_Processors,14,20,5.4,2.4,24.0,45.0,115.0,1195.0,96.0,1.55,96.0,Mobile,0.12000000000000001,0.3111111111111111,1.7142857142857142
+Intel® Core™ 7 processor 250U (12M Cache- up to 5.40 GHz),Core_Processors,10,12,5.4,2.4,12.0,15.0,55.0,1195.0,96.0,1.3,96.0,Mobile,0.36000000000000004,0.6666666666666666,1.2
+Intel® Core™ 7 Processor 251E (36M Cache- up to 5.60 GHz),Core_Processors,24,32,5.6,2.4,36.0,35.0,115.0,384.0,192.0,1.66,32.0,Embedded,0.14285714285714285,0.4,1.5
+Intel® Core™ 7 Processor 251TE (36M Cache- up to 5.40 GHz),Core_Processors,24,32,5.4,2.4,36.0,35.0,115.0,384.0,192.0,1.6,32.0,Embedded,0.14285714285714285,0.4,1.5
+Intel® Core™ 9 processor 270H (24M Cache- up to 5.80 GHz),Core_Processors,14,20,5.8,2.4,24.0,45.0,115.0,1195.0,96.0,1.55,96.0,Mobile,0.1288888888888889,0.3111111111111111,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 225F (20M Cache- up to 4.90 GHz),Core_Ultra_Processors,10,10,4.9,2.4,20.0,65.0,121.0,221.0,256.0,1.85,72.0,Desktop,0.07538461538461538,0.15384615384615385,2.0
+Intel® Core™ Ultra 5 Processor 225H (18M Cache- up to 4.90 GHz),Core_Ultra_Processors,14,14,4.9,2.4,18.0,28.0,115.0,1195.0,128.0,2.2,72.0,Mobile,0.17500000000000002,0.5,1.2857142857142858
+Intel® Core™ Ultra 5 Processor 225T (20M Cache- up to 4.90 GHz),Core_Ultra_Processors,10,10,4.9,2.4,20.0,35.0,114.0,236.0,256.0,1.8,72.0,Desktop,0.14,0.2857142857142857,2.0
+Intel® Core™ Ultra 5 Processor 225U (12M Cache- up to 4.80 GHz),Core_Ultra_Processors,12,14,4.8,2.4,12.0,15.0,57.0,1195.0,128.0,2.0,72.0,Mobile,0.32,0.8,1.0
+Intel® Core™ Ultra 5 Processor 225 (20M Cache- up to 4.90 GHz),Core_Ultra_Processors,10,10,4.9,2.4,20.0,65.0,121.0,236.0,256.0,1.8,72.0,Desktop,0.07538461538461538,0.15384615384615385,2.0
+Intel® Core™ Ultra 5 Processor 226V (8M Cache- up to 4.50 GHz),Core_Ultra_Processors,8,8,4.5,2.4,8.0,17.0,37.0,1195.0,16.0,1.85,72.0,Mobile,0.2647058823529412,0.47058823529411764,1.0
+Intel® Core™ Ultra 5 Processor 228V (8M Cache- up to 4.50 GHz),Core_Ultra_Processors,8,8,4.5,2.4,8.0,17.0,37.0,1195.0,32.0,1.85,72.0,Mobile,0.2647058823529412,0.47058823529411764,1.0
+Intel® Core™ Ultra 5 Processor 230F (24M Cache- up to 5.00 GHz),Core_Ultra_Processors,10,10,5.0,2.4,24.0,65.0,121.0,1195.0,256.0,1.85,72.0,Desktop,0.07692307692307693,0.15384615384615385,2.4
+Intel® Core™ Ultra 5 Processor 235A (24M Cache- up to 5.00 GHz),Core_Ultra_Processors,14,14,5.0,2.4,24.0,65.0,121.0,269.0,256.0,2.0,72.0,Desktop,0.07692307692307693,0.2153846153846154,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 235HX (24M Cache- up to 5.10 GHz),Core_Ultra_Processors,14,14,5.1,2.4,24.0,55.0,160.0,1195.0,256.0,1.8,72.0,Mobile,0.09272727272727273,0.2545454545454545,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 235H (18M Cache- up to 5.00 GHz),Core_Ultra_Processors,14,14,5.0,2.4,18.0,28.0,115.0,1195.0,128.0,2.25,72.0,Mobile,0.17857142857142858,0.5,1.2857142857142858
+Intel® Core™ Ultra 5 Processor 235TA (24M Cache- up to 5.00 GHz),Core_Ultra_Processors,14,14,5.0,2.4,24.0,35.0,114.0,269.0,256.0,2.0,72.0,Desktop,0.14285714285714285,0.4,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 235T (24M Cache- up to 5.00 GHz),Core_Ultra_Processors,14,14,5.0,2.4,24.0,35.0,114.0,247.0,256.0,2.0,72.0,Desktop,0.14285714285714285,0.4,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 235U (12M Cache- up to 4.90 GHz),Core_Ultra_Processors,12,14,4.9,2.4,12.0,15.0,57.0,1195.0,128.0,2.05,72.0,Mobile,0.3266666666666667,0.8,1.0
+Intel® Core™ Ultra 5 Processor 235 (24M Cache- up to 5.00 GHz),Core_Ultra_Processors,14,14,5.0,2.4,24.0,65.0,121.0,247.0,256.0,2.0,72.0,Desktop,0.07692307692307693,0.2153846153846154,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 236V (8M Cache- up to 4.70 GHz),Core_Ultra_Processors,8,8,4.7,2.4,8.0,17.0,37.0,1195.0,16.0,1.85,72.0,Mobile,0.27647058823529413,0.47058823529411764,1.0
+Intel® Core™ Ultra 5 Processor 238V (8M Cache- up to 4.70 GHz),Core_Ultra_Processors,8,8,4.7,2.4,8.0,17.0,37.0,1195.0,32.0,1.85,72.0,Mobile,0.27647058823529413,0.47058823529411764,1.0
+Intel® Core™ Ultra 5 Processor 245HX (24M Cache- up to 5.10 GHz),Core_Ultra_Processors,14,14,5.1,2.4,24.0,55.0,160.0,1195.0,256.0,1.9,72.0,Mobile,0.09272727272727273,0.2545454545454545,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 245KF (24M Cache- up to 5.20 GHz),Core_Ultra_Processors,14,14,5.2,2.4,24.0,125.0,159.0,294.0,256.0,1.85,72.0,Desktop,0.0416,0.112,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 245K (24M Cache- up to 5.20 GHz),Core_Ultra_Processors,14,14,5.2,2.4,24.0,125.0,159.0,309.0,256.0,1.9,72.0,Desktop,0.0416,0.112,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 245T (24M Cache- up to 5.10 GHz),Core_Ultra_Processors,14,14,5.1,2.4,24.0,35.0,114.0,270.0,256.0,1.9,72.0,Desktop,0.1457142857142857,0.4,1.7142857142857142
+Intel® Core™ Ultra 5 Processor 245 (24M Cache- up to 5.10 GHz),Core_Ultra_Processors,14,14,5.1,2.4,24.0,65.0,121.0,270.0,256.0,1.9,72.0,Desktop,0.07846153846153846,0.2153846153846154,1.7142857142857142
+Intel® Core™ Ultra 7 Processor 255HX (30M Cache- up to 5.20 GHz),Core_Ultra_Processors,20,20,5.2,2.4,30.0,55.0,160.0,1195.0,256.0,1.85,72.0,Mobile,0.09454545454545454,0.36363636363636365,1.5
+Intel® Core™ Ultra 7 Processor 255H (24M Cache- up to 5.10 GHz),Core_Ultra_Processors,16,16,5.1,2.4,24.0,28.0,115.0,1195.0,128.0,2.25,72.0,Mobile,0.18214285714285713,0.5714285714285714,1.5
+Intel® Core™ Ultra 7 Processor 255U (12M Cache- up to 5.20 GHz),Core_Ultra_Processors,12,14,5.2,2.4,12.0,15.0,57.0,1195.0,128.0,2.1,72.0,Mobile,0.3466666666666667,0.8,1.0
+Intel® Core™ Ultra 7 Processor 256V (12M Cache- up to 4.80 GHz),Core_Ultra_Processors,8,8,4.8,2.4,12.0,17.0,37.0,1195.0,16.0,1.95,72.0,Mobile,0.2823529411764706,0.47058823529411764,1.5
+Intel® Core™ Ultra 7 Processor 258V (12M Cache- up to 4.80 GHz),Core_Ultra_Processors,8,8,4.8,2.4,12.0,17.0,37.0,1195.0,32.0,1.95,72.0,Mobile,0.2823529411764706,0.47058823529411764,1.5
+Intel® Core™ Ultra 7 Processor 265F (30M Cache- up to 5.30 GHz),Core_Ultra_Processors,20,20,5.3,2.4,30.0,65.0,182.0,369.0,256.0,1.85,72.0,Desktop,0.08153846153846153,0.3076923076923077,1.5
+Intel® Core™ Ultra 7 Processor 265HX (30M Cache- up to 5.30 GHz),Core_Ultra_Processors,20,20,5.3,2.4,30.0,55.0,160.0,1195.0,256.0,1.9,72.0,Mobile,0.09636363636363636,0.36363636363636365,1.5
+Intel® Core™ Ultra 7 Processor 265H (24M Cache- up to 5.30 GHz),Core_Ultra_Processors,16,16,5.3,2.4,24.0,28.0,115.0,1195.0,128.0,2.3,72.0,Mobile,0.18928571428571428,0.5714285714285714,1.5
+Intel® Core™ Ultra 7 Processor 265KF (30M Cache- up to 5.50 GHz),Core_Ultra_Processors,20,20,5.5,2.4,30.0,125.0,250.0,379.0,256.0,1.85,72.0,Desktop,0.044,0.16,1.5
+Intel® Core™ Ultra 7 Processor 265K (30M Cache- up to 5.50 GHz),Core_Ultra_Processors,20,20,5.5,2.4,30.0,125.0,250.0,394.0,256.0,2.0,72.0,Desktop,0.044,0.16,1.5
+Intel® Core™ Ultra 7 Processor 265T (30M Cache- up to 5.30 GHz),Core_Ultra_Processors,20,20,5.3,2.4,30.0,35.0,112.0,384.0,256.0,1.95,72.0,Desktop,0.1514285714285714,0.5714285714285714,1.5
+Intel® Core™ Ultra 7 Processor 265U (12M Cache- up to 5.30 GHz),Core_Ultra_Processors,12,14,5.3,2.4,12.0,15.0,57.0,1195.0,128.0,2.1,72.0,Mobile,0.35333333333333333,0.8,1.0
+Intel® Core™ Ultra 7 Processor 265 (30M Cache- up to 5.30 GHz),Core_Ultra_Processors,20,20,5.3,2.4,30.0,65.0,182.0,384.0,256.0,1.95,72.0,Desktop,0.08153846153846153,0.3076923076923077,1.5
+Intel® Core™ Ultra 7 Processor 266V (12M Cache- up to 5.00 GHz),Core_Ultra_Processors,8,8,5.0,2.4,12.0,17.0,37.0,1195.0,16.0,2.0,72.0,Mobile,0.29411764705882354,0.47058823529411764,1.5
+Intel® Core™ Ultra 7 Processor 268V (12M Cache- up to 5.00 GHz),Core_Ultra_Processors,8,8,5.0,2.4,12.0,17.0,37.0,1195.0,32.0,2.0,72.0,Mobile,0.29411764705882354,0.47058823529411764,1.5
+Intel® Core™ Ultra 9 Processor 275HX (36M Cache- up to 5.40 GHz),Core_Ultra_Processors,24,24,5.4,2.4,36.0,55.0,160.0,1195.0,256.0,1.9,72.0,Mobile,0.09818181818181819,0.43636363636363634,1.5
+Intel® Core™ Ultra 9 Processor 285HX (36M Cache- up to 5.50 GHz),Core_Ultra_Processors,24,24,5.5,2.4,36.0,55.0,160.0,1195.0,256.0,2.0,72.0,Mobile,0.1,0.43636363636363634,1.5
+Intel® Core™ Ultra 9 Processor 285H (24M Cache- up to 5.40 GHz),Core_Ultra_Processors,16,16,5.4,2.4,24.0,45.0,115.0,1195.0,128.0,2.35,72.0,Mobile,0.12000000000000001,0.35555555555555557,1.5
+Intel® Core™ Ultra 9 Processor 285K (36M Cache- up to 5.70 GHz),Core_Ultra_Processors,24,24,5.7,2.4,36.0,125.0,250.0,589.0,256.0,2.0,72.0,Desktop,0.0456,0.192,1.5
+Intel® Core™ Ultra 9 Processor 285T (36M Cache- up to 5.40 GHz),Core_Ultra_Processors,24,24,5.4,2.4,36.0,35.0,112.0,549.0,256.0,2.0,72.0,Desktop,0.1542857142857143,0.6857142857142857,1.5
+Intel® Core™ Ultra 9 Processor 285 (36M Cache- up to 5.60 GHz),Core_Ultra_Processors,24,24,5.6,2.4,36.0,65.0,182.0,549.0,256.0,2.0,72.0,Desktop,0.08615384615384615,0.36923076923076925,1.5
+Intel® Core™ Ultra 9 Processor 288V (12M Cache- up to 5.10 GHz),Core_Ultra_Processors,8,8,5.1,2.4,12.0,30.0,37.0,1195.0,32.0,2.05,72.0,Mobile,0.16999999999999998,0.26666666666666666,1.5
+Intel® Xeon® CPU Max 9480 Processor (112.5M Cache- 1.90 GHz),Xeon_Max_Processors,56,112,3.5,1.9,112.5,35.0,115.0,12980.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,2.0089285714285716
+Intel® Xeon® CPU Max 9470 Processor (105M Cache- 2.00 GHz),Xeon_Max_Processors,52,104,3.5,2.0,105.0,35.0,115.0,11590.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,2.019230769230769
+Intel® Xeon® CPU Max 9460 Processor (97.5M Cache- 2.20 GHz),Xeon_Max_Processors,40,80,3.5,2.2,97.5,35.0,115.0,8750.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,2.4375
+Intel® Xeon® CPU Max 9468 Processor (105M Cache- 2.10 GHz),Xeon_Max_Processors,48,96,3.5,2.1,105.0,35.0,115.0,9900.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,2.1875
+Intel® Xeon® CPU Max 9462 Processor (75M Cache- 2.70 GHz),Xeon_Max_Processors,32,64,3.5,2.7,75.0,35.0,115.0,7995.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,2.34375
+Intel® Xeon® 6315P Processor (12M Cache- 2.80 GHz),Xeon_Processors,4,4,5.2,2.8,12.0,35.0,115.0,213.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6325P Processor (12M Cache- 3.50 GHz),Xeon_Processors,4,8,5.2,3.5,12.0,35.0,115.0,281.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6333P Processor (18M Cache- 3.10 GHz),Xeon_Processors,6,12,4.6,3.1,18.0,35.0,115.0,319.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6337P Processor (18M Cache- 3.50 GHz),Xeon_Processors,6,12,5.3,3.5,18.0,35.0,115.0,375.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6349P Processor (18M Cache- 3.60 GHz),Xeon_Processors,6,12,5.7,3.6,18.0,35.0,115.0,506.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6353P Processor (24M Cache- 2.70 GHz),Xeon_Processors,8,16,5.4,2.7,24.0,35.0,115.0,426.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6357P Processor (24M Cache- 3.00 GHz),Xeon_Processors,8,16,5.4,3.0,24.0,35.0,115.0,556.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6369P Processor (24M Cache 3.30 GHz),Xeon_Processors,8,16,5.7,3.3,24.0,35.0,115.0,606.0,128.0,1.85,72.0,Server,0.14285714285714285,0.4,3.0
+Intel® Xeon® 6503P-B Processor (48M Cache- 2.00 GHz),Xeon_Processors,12,24,3.5,2.0,48.0,35.0,115.0,934.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6505P Processor (48M Cache- 2.20 GHz),Xeon_Processors,12,24,4.1,2.2,48.0,35.0,115.0,563.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6507P Processor (48M Cache- 3.50 GHz),Xeon_Processors,8,16,4.3,3.5,48.0,35.0,115.0,765.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6511P Processor (72M Cache- 2.30 GHz),Xeon_Processors,16,32,4.2,2.3,72.0,35.0,115.0,815.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6513P-B Processor (80M Cache- 2.00 GHz),Xeon_Processors,20,40,3.3,2.0,80.0,35.0,115.0,1399.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6515P Processor (72M Cache- 2.30 GHz),Xeon_Processors,16,32,3.8,2.3,72.0,35.0,115.0,740.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6516P-B Processor (80M Cache- 2.30 GHz),Xeon_Processors,20,40,3.5,2.3,80.0,35.0,115.0,1544.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6517P Processor (72M Cache- 3.20 GHz),Xeon_Processors,16,32,4.2,3.2,72.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6520P Processor (144M Cache- 2.40 GHz),Xeon_Processors,24,48,4.0,2.4,144.0,35.0,115.0,1295.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6521P Processor  (144M Cache- 2.60 GHz),Xeon_Processors,24,48,4.1,2.6,144.0,35.0,115.0,1250.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6523P-B Processor (96M Cache- 2.50 GHz),Xeon_Processors,24,48,3.9,2.5,96.0,35.0,115.0,1450.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6527P Processor (144M Cache- 3.00 GHz),Xeon_Processors,24,48,4.2,3.0,144.0,35.0,115.0,2878.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6530P Processor  (144M Cache- 2.30 GHz),Xeon_Processors,32,64,4.1,2.3,144.0,35.0,115.0,2234.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6533P-B Processor (128M Cache- 2.20 GHz),Xeon_Processors,32,64,3.9,2.2,128.0,35.0,115.0,1795.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6543P-B Processor (128M Cache- 2.00 GHz),Xeon_Processors,32,64,3.3,2.0,128.0,35.0,115.0,2206.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6546P-B Processor (128M Cache- 2.30 GHz),Xeon_Processors,32,64,3.5,2.3,128.0,35.0,115.0,2368.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6553P-B Processor (144M Cache- 2.60 GHz),Xeon_Processors,36,72,4.0,2.6,144.0,35.0,115.0,2402.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6556P-B Processor (144M Cache- 2.30 GHz),Xeon_Processors,36,72,3.5,2.3,144.0,35.0,115.0,2628.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6563P-B Processor (152M Cache- 2.40 GHz),Xeon_Processors,38,76,4.0,2.4,152.0,35.0,115.0,2616.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6706P-B Processor (160M Cache- 2.50 GHz),Xeon_Processors,40,80,3.5,2.5,160.0,35.0,115.0,3200.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6710E Processor (96M Cache- 2.40 GHz),Xeon_Processors,64,64,3.2,2.4,96.0,35.0,115.0,2199.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,1.5
+Intel® Xeon® 6714P Processor (48M Cache- 4.00 GHz),Xeon_Processors,8,16,4.3,4.0,48.0,35.0,115.0,2816.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6716P-B Processor (160M Cache- 2.50 GHz),Xeon_Processors,40,80,3.5,2.5,160.0,35.0,115.0,3200.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6724P Processor (72M Cache- 3.60 GHz),Xeon_Processors,16,32,4.3,3.6,72.0,35.0,115.0,3622.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6726P-B Processor (168M Cache- 2.30 GHz),Xeon_Processors,42,84,3.5,2.3,168.0,35.0,115.0,3795.0,1.13,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6728P Processor (144M Cache- 2.70 GHz),Xeon_Processors,24,48,4.1,2.7,144.0,35.0,115.0,2478.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6730P Processor (288M Cache- 2.50 GHz),Xeon_Processors,32,64,3.8,2.5,288.0,35.0,115.0,3726.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,9.0
+Intel® Xeon® 6731E Processor (96M Cache- 2.20 GHz),Xeon_Processors,96,96,3.1,2.2,96.0,35.0,115.0,3297.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,1.0
+Intel® Xeon® 6731P Processor  (144M Cache- 2.50 GHz),Xeon_Processors,32,64,4.1,2.5,144.0,35.0,115.0,2700.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6732P Processor (144M Cache- 3.80 GHz),Xeon_Processors,32,64,4.3,3.8,144.0,35.0,115.0,5295.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6736P Processor  (144M Cache- 2.00 GHz),Xeon_Processors,36,72,4.1,2.0,144.0,35.0,115.0,3351.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6737P Processor  (144M Cache- 2.90 GHz),Xeon_Processors,32,64,4.0,2.9,144.0,35.0,115.0,4995.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6738P Processor  (144M Cache- 2.90 GHz),Xeon_Processors,32,64,4.2,2.9,144.0,35.0,115.0,6540.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6740E Processor (96M Cache- 2.40 GHz),Xeon_Processors,96,96,3.2,2.4,96.0,35.0,115.0,3949.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,1.0
+Intel® Xeon® 6740P Processor (288M Cache- 2.10 GHz),Xeon_Processors,48,96,3.8,2.1,288.0,35.0,115.0,4650.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6741P Processor (288M Cache- 2.50 GHz),Xeon_Processors,48,96,3.8,2.5,288.0,35.0,115.0,4421.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6745P Processor (336M Cache- 3.10 GHz),Xeon_Processors,32,64,4.3,3.1,336.0,35.0,115.0,5250.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,10.5
+Intel® Xeon® 6746E Processor (96M Cache- 2.00 GHz),Xeon_Processors,112,112,2.7,2.0,96.0,35.0,115.0,4447.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,0.8571428571428571
+Intel® Xeon® 6747P Processor (288M Cache- 2.70 GHz),Xeon_Processors,48,96,3.9,2.7,288.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6748P Processor  (192M Cache- 2.50 GHz),Xeon_Processors,48,96,4.1,2.5,192.0,35.0,115.0,12702.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.0
+Intel® Xeon® 6756E Processor (96M Cache- 1.80 GHz),Xeon_Processors,128,128,2.6,1.8,96.0,35.0,115.0,6320.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,0.75
+Intel® Xeon® 6760P Processor (320M Cache- 2.20 GHz),Xeon_Processors,64,128,3.8,2.2,320.0,35.0,115.0,7803.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,5.0
+Intel® Xeon® 6761P Processor (336M Cache- 2.50 GHz),Xeon_Processors,64,128,3.9,2.5,336.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,5.25
+Intel® Xeon® 6766E Processor (108M Cache- 1.90 GHz),Xeon_Processors,144,144,2.7,1.9,108.0,35.0,115.0,7692.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,0.75
+Intel® Xeon® 6767P Processor (336M Cache- 2.40 GHz),Xeon_Processors,64,128,3.9,2.4,336.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,5.25
+Intel® Xeon® 6768P Processor (336M Cache- 2.40 GHz),Xeon_Processors,64,128,3.9,2.4,336.0,35.0,115.0,16000.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,5.25
+Intel® Xeon® 6774P Processor (336M Cache- 2.50 GHz),Xeon_Processors,64,128,3.9,2.5,336.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,5.25
+Intel® Xeon® 6776P Processor (336M Cache- 2.30 GHz),Xeon_Processors,64,128,3.9,2.3,336.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,5.25
+Intel® Xeon® 6780E Processor (108M Cache- 2.20 GHz),Xeon_Processors,144,144,3.0,2.2,108.0,35.0,115.0,8513.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,0.75
+Intel® Xeon® 6781P Processor (336M Cache- 2.00 GHz),Xeon_Processors,80,160,3.8,2.0,336.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,4.2
+Intel® Xeon® 6787P Processor (336M Cache- 2.00 GHz),Xeon_Processors,86,172,3.8,2.0,336.0,35.0,115.0,1195.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,3.9069767441860463
+Intel® Xeon® 6788P Processor (336M Cache- 2.00 GHz),Xeon_Processors,86,172,3.8,2.0,336.0,35.0,115.0,19000.0,4.0,1.85,72.0,Server,0.14285714285714285,0.4,3.9069767441860463
+Intel® Xeon® 6944P Processor (432M Cache- 1.80 GHz),Xeon_Processors,72,144,3.9,1.8,432.0,35.0,115.0,6850.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6952P Processor (480M Cache- 2.10 GHz),Xeon_Processors,96,192,3.9,2.1,480.0,35.0,115.0,9115.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,5.0
+Intel® Xeon® 6960P Processor (432M Cache- 2.70 GHz),Xeon_Processors,72,144,3.9,2.7,432.0,35.0,115.0,1195.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,6.0
+Intel® Xeon® 6966P-C Processor (432M Cache- 3.00 GHz),Xeon_Processors,96,192,3.9,3.1,432.0,35.0,115.0,1195.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,4.5
+Intel® Xeon® 6972P Processor (480M Cache- 2.40 GHz),Xeon_Processors,96,192,3.9,2.4,480.0,35.0,115.0,10220.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,5.0
+Intel® Xeon® 6978P Processor (504M Cache- 2.10 GHz),Xeon_Processors,120,240,3.9,2.1,504.0,35.0,115.0,11025.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,4.2
+Intel® Xeon® 6979P Processor (504M Cache- 2.10 GHz),Xeon_Processors,120,240,3.9,2.1,504.0,35.0,115.0,11025.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,4.2
+Intel® Xeon® 6980P Processor (504M Cache- 2.00 GHz),Xeon_Processors,128,256,3.9,2.0,504.0,35.0,115.0,12460.0,3.0,1.85,72.0,Server,0.14285714285714285,0.4,3.9375
