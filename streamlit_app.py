@@ -147,215 +147,33 @@ def display_processor_card(row, rank=None):
             st.subheader(f"🏆 #{rank} - {row['processor_name'][:60]}")
         else:
             st.subheader(f"📱 {row['processor_name'][:60]}")
-        
+
         # Create metrics in columns
         col1, col2, col3, col4 = st.columns(4)
-        
-        with col1:
-            st.metric("📱 Total Processors", f"{len(df)}")
-        
-        with col2:
-            st.metric("💰 Avg Price", f"${df['feat.price_usd'].mean():,.0f}")
-        
-        with col3:
-            st.metric("⚡ Avg Turbo", f"{df['feat.max_turbo_ghz'].mean():.1f} GHz")
-        
-        with col4:
-            st.metric("🔧 Avg Cores", f"{df['feat.total_cores'].mean():.1f}")
-        
-        # Price distribution
-        st.subheader("💰 Price Distribution")
-        
-        price_ranges = [
-            ("Under $300", 0, 300),
-            ("$300-600", 300, 600),
-            ("$600-1000", 600, 1000),
-            ("$1000-2000", 1000, 2000),
-            ("Over $2000", 2000, float('inf'))
-        ]
-        
-        price_dist_data = []
-        for label, min_p, max_p in price_ranges:
-            count = len(df[(df['feat.price_usd'] >= min_p) & 
-                          (df['feat.price_usd'] < max_p)])
-            price_dist_data.append({"Price Range": label, "Count": count})
-        
-        price_dist_df = pd.DataFrame(price_dist_data)
-        st.bar_chart(price_dist_df.set_index('Price Range'))
-        
-        # Performance vs Price analysis
-        st.subheader("⚡ Performance vs Price Analysis")
-        
-        # Create performance score
-        df['performance_score'] = (df['feat.max_turbo_ghz'] * 0.4 + 
-                                 df['feat.total_cores'] * 0.3 + 
-                                 df['feat.freq_per_watt'] * 0.3)
-        
-        # Create price vs performance chart
-        try:
-            fig, ax = plt.subplots(figsize=(12, 8))
-            
-            # Color by category
-            categories = df['category'].unique()
-            colors = plt.cm.Set3(np.linspace(0, 1, len(categories)))
-            
-            for i, category in enumerate(categories):
-                cat_data = df[df['category'] == category]
-                scatter = ax.scatter(cat_data['feat.price_usd'], 
-                                   cat_data['performance_score'],
-                                   label=category,
-                                   alpha=0.7,
-                                   s=cat_data['feat.total_cores']*5,
-                                   c=[colors[i]])
-            
-            ax.set_xlabel('Price (USD)')
-            ax.set_ylabel('Performance Score')
-            ax.set_title('Performance Score vs Price by Category')
-            ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-            
-            # Add trend line
-            z = np.polyfit(df['feat.price_usd'], df['performance_score'], 1)
-            p = np.poly1d(z)
-            ax.plot(df['feat.price_usd'].sort_values(), 
-                   p(df['feat.price_usd'].sort_values()), 
-                   "r--", alpha=0.8, linewidth=2, label='Trend')
-            
-            plt.tight_layout()
-            st.pyplot(fig)
-            
-        except Exception as e:
-            st.info("Performance vs Price chart skipped - continuing with other analytics.")
-        
-        # Category breakdown
-        st.subheader("🏷️ Category Statistics")
-        
-        category_stats = df.groupby('category').agg({
-            'feat.price_usd': ['mean', 'min', 'max', 'count'],
-            'feat.max_turbo_ghz': 'mean',
-            'feat.total_cores': 'mean',
-            'feat.cache_mb': 'mean'
-        }).round(2)
-        
-        category_stats.columns = ['Avg Price ($)', 'Min Price ($)', 'Max Price ($)', 
-                                'Count', 'Avg Turbo (GHz)', 'Avg Cores', 'Avg Cache (MB)']
-        st.dataframe(category_stats, use_container_width=True)
-        
-        # Top performers by different metrics
-        st.subheader("🏆 Top Performers")
-        
-        col_top1, col_top2, col_top3 = st.columns(3)
-        
-        with col_top1:
-            st.write("**⚡ Highest Turbo Frequency**")
-            top_turbo = df.nlargest(5, 'feat.max_turbo_ghz')[['processor_name', 'feat.max_turbo_ghz', 'feat.price_usd']]
-            for _, row in top_turbo.iterrows():
-                st.write(f"• {row['processor_name'][:30]}...")
-                st.write(f"  {row['feat.max_turbo_ghz']:.1f} GHz - ${row['feat.price_usd']:,.0f}")
-        
-        with col_top2:
-            st.write("**🔧 Most Cores**")
-            top_cores = df.nlargest(5, 'feat.total_cores')[['processor_name', 'feat.total_cores', 'feat.price_usd']]
-            for _, row in top_cores.iterrows():
-                st.write(f"• {row['processor_name'][:30]}...")
-                st.write(f"  {int(row['feat.total_cores'])} cores - ${row['feat.price_usd']:,.0f}")
-        
-        with col_top3:
-            st.write("**⚡ Best Efficiency (Freq/Watt)**")
-            top_efficiency = df.nlargest(5, 'feat.freq_per_watt')[['processor_name', 'feat.freq_per_watt', 'feat.price_usd']]
-            for _, row in top_efficiency.iterrows():
-                st.write(f"• {row['processor_name'][:30]}...")
-                st.write(f"  {row['feat.freq_per_watt']:.3f} - ${row['feat.price_usd']:,.0f}")
-        
-        # Value analysis
-        st.subheader("💎 Best Value Processors")
-        
-        # Calculate value score (performance per dollar)
-        df['value_score'] = df['performance_score'] / (df['feat.price_usd'] / 1000)
-        
-        best_value = df.nlargest(10, 'value_score')[['processor_name', 'feat.price_usd', 
-                                                     'feat.max_turbo_ghz', 'feat.total_cores', 'value_score']]
-        
-        st.write("**Top 10 processors by value (performance per $1000):**")
-        
-        for idx, (_, row) in enumerate(best_value.iterrows(), 1):
-            col_val1, col_val2 = st.columns([3, 1])
-            
-            with col_val1:
-                st.write(f"**{idx}. {row['processor_name'][:50]}**")
-                st.write(f"💰 ${row['feat.price_usd']:,.0f} | ⚡ {row['feat.max_turbo_ghz']:.1f}GHz | 🔧 {int(row['feat.total_cores'])} cores")
-            
-            with col_val2:
-                st.metric("Value Score", f"{row['value_score']:.2f}")
-        
-        # Market insights
-        st.subheader("🧠 Market Insights")
-        
-        insights = []
-        
-        # Price insights
-        budget_count = len(df[df['feat.price_usd'] < 500])
-        premium_count = len(df[df['feat.price_usd'] > 1000])
-        insights.append(f"📊 {budget_count} processors ({budget_count/len(df)*100:.1f}%) are budget-friendly (under $500)")
-        insights.append(f"💎 {premium_count} processors ({premium_count/len(df)*100:.1f}%) are premium (over $1000)")
-        
-        # Performance insights
-        high_perf_count = len(df[df['feat.max_turbo_ghz'] > 4.5])
-        many_cores_count = len(df[df['feat.total_cores'] >= 8])
-        insights.append(f"🚀 {high_perf_count} processors ({high_perf_count/len(df)*100:.1f}%) have turbo frequency above 4.5 GHz")
-        insights.append(f"🔧 {many_cores_count} processors ({many_cores_count/len(df)*100:.1f}%) have 8 or more cores")
-        
-        # Efficiency insights
-        efficient_count = len(df[df['feat.freq_per_watt'] > 0.1])
-        insights.append(f"⚡ {efficient_count} processors ({efficient_count/len(df)*100:.1f}%) are highly efficient (>0.1 GHz/Watt)")
-        
-        for insight in insights:
-            st.info(insight)
-        
-        # Data download
-        st.subheader("📥 Export Data")
-        
-        # Prepare summary data for download
-        summary_data = df[['processor_name', 'category', 'feat.price_usd', 'feat.max_turbo_ghz', 
-                          'feat.total_cores', 'feat.total_threads', 'feat.cache_mb', 
-                          'feat.base_power_w', 'feat.freq_per_watt']].copy()
-        
-        summary_data.columns = ['Processor Name', 'Category', 'Price (USD)', 'Max Turbo (GHz)', 
-                               'Cores', 'Threads', 'Cache (MB)', 'Base Power (W)', 'Efficiency']
-        
-        csv = summary_data.to_csv(index=False)
-        st.download_button(
-            label="📥 Download Processor Data (CSV)",
-            data=csv,
-            file_name="intel_processors_summary.csv",
-            mime="text/csv"
-        )
 
-if __name__ == "__main__":
-    main()
-        
         with col1:
             st.metric("💰 Price", f"${row['feat.price_usd']:,.0f}")
-        
+
         with col2:
             st.metric("⚡ Max Turbo", f"{row['feat.max_turbo_ghz']:.1f} GHz")
-        
+
         with col3:
             st.metric("🔧 Cores/Threads", f"{int(row['feat.total_cores'])}/{int(row['feat.total_threads'])}")
-        
+
         with col4:
             st.metric("💾 Cache", f"{row['feat.cache_mb']:.0f} MB")
-        
+
         # Additional info in two columns
         info_col1, info_col2 = st.columns(2)
-        
+
         with info_col1:
             st.write(f"🏷️ **Category:** {row['category']}")
             st.write(f"🔋 **Base Power:** {row['feat.base_power_w']:.0f}W")
             st.write(f"🎮 **Graphics:** {row['feat.gfx_max_dyn_ghz']:.2f} GHz")
-        
+
         with info_col2:
             st.write(f"✅ **Best for:** {get_usage_recommendation(row)}")
-            
+
             # Price category
             price = row['feat.price_usd']
             if price < 300:
@@ -368,12 +186,13 @@ if __name__ == "__main__":
                 price_cat = "🧡 Premium choice"
             else:
                 price_cat = "❤️ Ultra-premium"
-            
+
             st.write(f"🏷️ **Price Category:** {price_cat}")
-            
+
             # Performance score if available
             if 'pref_score' in row:
                 st.write(f"📊 **Performance Score:** {row['pref_score']:.2f}")
+
 
 def create_simple_comparison_table(proc1, proc2):
     """Create a simple comparison table"""
@@ -745,7 +564,6 @@ def main():
             if search1:
                 matching1 = df[df['processor_name'].str.contains(search1, case=False, na=False)]
                 if not matching1.empty:
-                    # Show count
                     st.write(f"Found {len(matching1)} processors")
                     
                     processor1 = st.selectbox(
@@ -769,7 +587,6 @@ def main():
             if search2:
                 matching2 = df[df['processor_name'].str.contains(search2, case=False, na=False)]
                 if not matching2.empty:
-                    # Show count
                     st.write(f"Found {len(matching2)} processors")
                     
                     processor2 = st.selectbox(
@@ -849,3 +666,187 @@ def main():
         st.subheader("📊 Market Overview")
         
         col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric("📱 Total Processors", f"{len(df)}")
+        
+        with col2:
+            st.metric("💰 Avg Price", f"${df['feat.price_usd'].mean():,.0f}")
+        
+        with col3:
+            st.metric("⚡ Avg Turbo", f"{df['feat.max_turbo_ghz'].mean():.1f} GHz")
+        
+        with col4:
+            st.metric("🔧 Avg Cores", f"{df['feat.total_cores'].mean():.1f}")
+        
+        # Price distribution
+        st.subheader("💰 Price Distribution")
+        
+        price_ranges = [
+            ("Under $300", 0, 300),
+            ("$300-600", 300, 600),
+            ("$600-1000", 600, 1000),
+            ("$1000-2000", 1000, 2000),
+            ("Over $2000", 2000, float('inf'))
+        ]
+        
+        price_dist_data = []
+        for label, min_p, max_p in price_ranges:
+            count = len(df[(df['feat.price_usd'] >= min_p) & 
+                          (df['feat.price_usd'] < max_p)])
+            price_dist_data.append({"Price Range": label, "Count": count})
+        
+        price_dist_df = pd.DataFrame(price_dist_data)
+        st.bar_chart(price_dist_df.set_index('Price Range'))
+        
+        # Performance vs Price analysis
+        st.subheader("⚡ Performance vs Price Analysis")
+        
+        # Create performance score
+        df['performance_score'] = (df['feat.max_turbo_ghz'] * 0.4 + 
+                                 df['feat.total_cores'] * 0.3 + 
+                                 df['feat.freq_per_watt'] * 0.3)
+        
+        try:
+            fig, ax = plt.subplots(figsize=(12, 8))
+            
+            # Color by category
+            categories = df['category'].unique()
+            colors = plt.cm.Set3(np.linspace(0, 1, len(categories)))
+            
+            for i, category in enumerate(categories):
+                cat_data = df[df['category'] == category]
+                ax.scatter(cat_data['feat.price_usd'], 
+                           cat_data['performance_score'],
+                           label=category,
+                           alpha=0.7,
+                           s=cat_data['feat.total_cores']*5,
+                           c=[colors[i]])
+            
+            ax.set_xlabel('Price (USD)')
+            ax.set_ylabel('Performance Score')
+            ax.set_title('Performance Score vs Price by Category')
+            ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+            
+            # Add trend line
+            z = np.polyfit(df['feat.price_usd'], df['performance_score'], 1)
+            p = np.poly1d(z)
+            sorted_prices = df['feat.price_usd'].sort_values()
+            ax.plot(sorted_prices, p(sorted_prices), "r--", alpha=0.8, linewidth=2, label='Trend')
+            
+            plt.tight_layout()
+            st.pyplot(fig)
+            
+        except Exception as e:
+            st.info("Performance vs Price chart skipped due to an error.")
+
+        # Category breakdown
+        st.subheader("🏷️ Category Statistics")
+        
+        category_stats = df.groupby('category').agg({
+            'feat.price_usd': ['mean', 'min', 'max', 'count'],
+            'feat.max_turbo_ghz': 'mean',
+            'feat.total_cores': 'mean',
+            'feat.cache_mb': 'mean'
+        }).round(2)
+        
+        category_stats.columns = ['Avg Price ($)', 'Min Price ($)', 'Max Price ($)', 
+                                'Count', 'Avg Turbo (GHz)', 'Avg Cores', 'Avg Cache (MB)']
+        st.dataframe(category_stats, use_container_width=True)
+        
+        # Top performers by different metrics
+        st.subheader("🏆 Top Performers")
+        
+        col_top1, col_top2, col_top3 = st.columns(3)
+        
+        with col_top1:
+            st.write("**⚡ Highest Turbo Frequency**")
+            top_turbo = df.nlargest(5, 'feat.max_turbo_ghz')[['processor_name', 'feat.max_turbo_ghz', 'feat.price_usd']]
+            for _, row in top_turbo.iterrows():
+                st.write(f"• {row['processor_name'][:30]}...")
+                st.write(f"  {row['feat.max_turbo_ghz']:.1f} GHz - ${row['feat.price_usd']:,.0f}")
+        
+        with col_top2:
+            st.write("**🔧 Most Cores**")
+            top_cores = df.nlargest(5, 'feat.total_cores')[['processor_name', 'feat.total_cores', 'feat.price_usd']]
+            for _, row in top_cores.iterrows():
+                st.write(f"• {row['processor_name'][:30]}...")
+                st.write(f"  {int(row['feat.total_cores'])} cores - ${row['feat.price_usd']:,.0f}")
+        
+        with col_top3:
+            st.write("**⚡ Best Efficiency (Freq/Watt)**")
+            top_efficiency = df.nlargest(5, 'feat.freq_per_watt')[['processor_name', 'feat.freq_per_watt', 'feat.price_usd']]
+            for _, row in top_efficiency.iterrows():
+                st.write(f"• {row['processor_name'][:30]}...")
+                st.write(f"  {row['feat.freq_per_watt']:.3f} - ${row['feat.price_usd']:,.0f}")
+        
+        # Value analysis
+        st.subheader("💎 Best Value Processors")
+        
+        # Calculate value score (performance per dollar)
+        df['value_score'] = df['performance_score'] / (df['feat.price_usd'] / 1000)
+        
+        best_value = df.nlargest(10, 'value_score')[['processor_name', 'feat.price_usd', 
+                                                     'feat.max_turbo_ghz', 'feat.total_cores', 'value_score']]
+        
+        st.write("**Top 10 processors by value (performance per $1000):**")
+        
+        for idx, (_, row) in enumerate(best_value.iterrows(), 1):
+            col_val1, col_val2 = st.columns([3, 1])
+            
+            with col_val1:
+                st.write(f"**{idx}. {row['processor_name'][:50]}**")
+                st.write(f"💰 ${row['feat.price_usd']:,.0f} | ⚡ {row['feat.max_turbo_ghz']:.1f}GHz | 🔧 {int(row['feat.total_cores'])} cores")
+            
+            with col_val2:
+                st.metric("Value Score", f"{row['value_score']:.2f}")
+        
+        # Market insights
+        st.subheader("🧠 Market Insights")
+        
+        insights = []
+        
+        # Price insights
+        budget_count = len(df[df['feat.price_usd'] < 500])
+        premium_count = len(df[df['feat.price_usd'] > 1000])
+        insights.append(f"📊 {budget_count} processors ({budget_count/len(df)*100:.1f}%) are budget-friendly (under $500)")
+        insights.append(f"💎 {premium_count} processors ({premium_count/len(df)*100:.1f}%) are premium (over $1000)")
+        
+        # Performance insights
+        high_perf_count = len(df[df['feat.max_turbo_ghz'] > 4.5])
+        many_cores_count = len(df[df['feat.total_cores'] >= 8])
+        insights.append(f"🚀 {high_perf_count} processors ({high_perf_count/len(df)*100:.1f}%) have turbo frequency above 4.5 GHz")
+        insights.append(f"🔧 {many_cores_count} processors ({many_cores_count/len(df)*100:.1f}%) have 8 or more cores")
+        
+        # Efficiency insights
+        efficient_count = len(df[df['feat.freq_per_watt'] > 0.1])
+        insights.append(f"⚡ {efficient_count} processors ({efficient_count/len(df)*100:.1f}%) are highly efficient (>0.1 GHz/Watt)")
+        
+        for insight in insights:
+            st.info(insight)
+        
+        # Data download
+        st.subheader("📥 Export Data")
+        
+        # Prepare summary data for download
+        summary_data = df[['processor_name', 'category', 'feat.price_usd', 'feat.max_turbo_ghz', 
+                          'feat.total_cores', 'feat.total_threads', 'feat.cache_mb', 
+                          'feat.base_power_w', 'feat.freq_per_watt']].copy()
+        
+        summary_data.columns = ['Processor Name', 'Category', 'Price (USD)', 'Max Turbo (GHz)', 
+                               'Cores', 'Threads', 'Cache (MB)', 'Base Power (W)', 'Efficiency']
+        
+        csv = summary_data.to_csv(index=False)
+        st.download_button(
+            label="📥 Download Processor Data (CSV)",
+            data=csv,
+            file_name="intel_processors_summary.csv",
+            mime="text/csv"
+        )
+
+
+# -------------------
+# RUN APP
+# -------------------
+if __name__ == "__main__":
+    main()
